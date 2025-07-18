@@ -16,6 +16,7 @@ Este módulo de Terraform crea una cola SQS en AWS, permitiendo la integración 
 | ------------- | ---------------------------------- |
 | `queue_arn`   | ARN de la cola SQS                 |
 | `queue_url`   | URL de la cola SQS                 |
+| `queue_name`  | Nombre de la cola SQS              |
 
 ## Ejemplo de uso
 
