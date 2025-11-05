@@ -9,5 +9,6 @@ resource "aws_sqs_queue" "event" {
     deadLetterTargetArn = aws_sqs_queue.event_dlq.arn
     maxReceiveCount     = var.max_delivery_attempts
   })
+  visibility_timeout_seconds = var.visibility_timeout_seconds
   tags = var.common_tags
 }
