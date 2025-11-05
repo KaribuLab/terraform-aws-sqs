@@ -8,6 +8,7 @@ Este módulo de Terraform crea una cola SQS en AWS, permitiendo la integración 
 | --------------- | ---------------------------------- | ------------ | --------- |
 | `name`          | Nombre de la cola SQS              | string       | Sí        |
 | `fifo_queue`    | Indica si la cola es FIFO          | bool         | No        |
+| `visibility_timeout_seconds`| Tiempo que estará un mensaje no visible mientras se procesa              | string       | No        |
 | `tags`          | Tags aplicados a la cola           | map(string)  | No        |
 
 ## Variables de salida
@@ -26,6 +27,7 @@ module "sqs" {
 
   name = "mi-cola-sqs"
   fifo_queue = false
+| visibility_timeout_seconds = 30
   tags = {
     Environment = "dev"
     Project     = "ejemplo"
