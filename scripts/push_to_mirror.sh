@@ -21,7 +21,7 @@ else
 fi
 
 # Sincronizar archivos desde el repo de GitHub (../) al subdirectorio karibu/
-echo "Syncing files from GitHub repo to karibu/${MODULE_NAME}/"
+echo "Syncing content from GitHub repo to karibu/${MODULE_NAME}/"
 mkdir -p karibu/${MODULE_NAME}
 rsync -av --delete \
     --exclude='.git' \
